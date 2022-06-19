@@ -1,0 +1,10 @@
+.env
+src/
+test/
+.github/
+coverage/
+jest.config.js
+vite.config.js
+tsconfig.json
+yarn.lock
+CODE_OF_CONDUCT.md
