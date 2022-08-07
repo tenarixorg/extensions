@@ -1,5 +1,5 @@
 {
-  "name": "leer_manga",
+  "name": "@tenarix-ext/leermanga",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {

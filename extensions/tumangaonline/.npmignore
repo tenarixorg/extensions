@@ -1,10 +1,11 @@
 .env
 src/
+.turbo/
 test/
 .github/
 coverage/
 jest.config.js
-vite.config.js
+vite.config.ts
 tsconfig.json
 yarn.lock
 CODE_OF_CONDUCT.md

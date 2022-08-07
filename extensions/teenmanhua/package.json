@@ -1,5 +1,5 @@
 {
-  "name": "teen_manhua",
+  "name": "@tenarix-ext/teenmanhua",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {

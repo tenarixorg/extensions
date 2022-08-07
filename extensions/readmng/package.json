@@ -1,5 +1,5 @@
 {
-  "name": "read_manga",
+  "name": "@tenarix-ext/readmanga",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
