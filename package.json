@@ -11,6 +11,7 @@
     "test": "turbo run test",
     "test:staged": "turbo run test:staged --",
     "build": "turbo run build",
+    "push:ext": "cd scripts/publish && yarn start",
     "clean": "cd scripts/clean && yarn clean",
     "lint": "eslint . --ext .js,.ts,.tsx --fix",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
