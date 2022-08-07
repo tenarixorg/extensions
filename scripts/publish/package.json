@@ -1,0 +1,15 @@
+{
+  "name": "publish",
+  "version": "0.0.0",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "@jsdevtools/npm-publish": "^1.4.3",
+    "dotenv": "^16.0.1",
+    "ora": "^6.1.2"
+  }
+}
