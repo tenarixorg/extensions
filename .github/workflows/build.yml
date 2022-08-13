@@ -34,4 +34,4 @@ jobs:
       - name: Build
         run: yarn build
       - name: Publish
-        run: node /scripts/publish/
+        run: node ./scripts/publish/
