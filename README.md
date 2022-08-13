@@ -1,3 +1,1 @@
 # Tenarix Extensions
-
-Test
