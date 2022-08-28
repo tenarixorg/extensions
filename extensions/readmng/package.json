@@ -1,7 +1,10 @@
 {
-  "name": "@tenarix-ext/readmanga",
+  "name": "readmanga",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "lang": "en",
+  "author": "Akuqt",
+  "description": "Read Manga Today source for tenarix",
   "scripts": {
     "test": "jest",
     "build": "vite build"

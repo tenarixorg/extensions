@@ -1,7 +1,10 @@
 {
-  "name": "@tenarix-ext/leermanga",
+  "name": "leermanga",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "lang": "es",
+  "author": "Akuqt",
+  "description": "Leer Manga source for tenarix",
   "scripts": {
     "test": "jest",
     "build": "vite build"

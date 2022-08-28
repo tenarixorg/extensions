@@ -1,7 +1,10 @@
 {
-  "name": "@tenarix-ext/inmanga",
+  "name": "inmanga",
   "version": "1.0.0",
+  "lang": "es",
   "main": "dist/index.js",
+  "author": "Akuqt",
+  "description": "Inmanga source for tenarix",
   "scripts": {
     "test": "jest",
     "build": "vite build"

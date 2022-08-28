@@ -1,7 +1,10 @@
 {
-  "name": "@tenarix-ext/teenmanhua",
+  "name": "teenmanhua",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "lang": "en",
+  "author": "Akuqt",
+  "description": "Teen Manhua source for tenarix",
   "scripts": {
     "test": "jest",
     "build": "vite build"

@@ -1,8 +1,11 @@
 {
-  "name": "@tenarix-ext/tumangaonline",
+  "name": "tumangaonline",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
+  "lang": "es",
+  "author": "Akuqt",
+  "description": "Tu Manga Online source for tenarix",
   "scripts": {
     "test": "jest",
     "build": "vite build"

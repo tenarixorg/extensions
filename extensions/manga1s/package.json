@@ -1,7 +1,10 @@
 {
-  "name": "@tenarix-ext/manga1s",
+  "name": "manga1s",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "lang": "en",
+  "author": "Akuqt",
+  "description": "Manga 1S source for tenarix",
   "scripts": {
     "test": "jest",
     "build": "vite build"
