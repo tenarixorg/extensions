@@ -32,5 +32,3 @@ jobs:
         run: yarn
       - name: Build
         run: yarn build
-      - name: Publish
-        run: node ./scripts/publish/
