@@ -2,7 +2,7 @@
 import fs from "fs";
 import ora from "ora";
 import { fileURLToPath } from "url";
-import { npmPublish } from "@jsdevtools/npm-publish";
+import { addExtension } from "@tenarix/ext-uploader";
 import { config } from "dotenv";
 import { join } from "path";
 
@@ -11,9 +11,9 @@ const __root = join(__dirname, "../../extensions/");
 
 config();
 
-const { TOKEN, REGISTRY } = process.env;
+const { TOKEN } = process.env;
 
-if (!TOKEN || !REGISTRY) {
+if (!TOKEN) {
   ora("Missing environment variables").fail();
   process.exit(1);
 }
@@ -21,16 +21,9 @@ if (!TOKEN || !REGISTRY) {
 const exts = fs.readdirSync(__root);
 
 for (const ext of exts) {
-  const packageJson = join(__root, ext, "package.json");
-  const loading = ora(`Publishing ${ext}`).start();
-  await npmPublish({
-    quiet: true,
-    token: TOKEN,
-    access: "public",
-    checkVersion: true,
-    registry: REGISTRY,
-    package: packageJson,
+  const path = join(__root, ext);
+  await addExtension({
+    secret: TOKEN,
+    path,
   });
-  loading.succeed(`${ext} published`);
-  loading.stop();
 }
