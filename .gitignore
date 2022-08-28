@@ -40,3 +40,6 @@ yarn-error.log*
 .turbo
 app/workers/test/out_/crypto.txt.enc
 app/workers/test/out_/crypto.txt.fail
+
+# tarballs 
+*.tgz
