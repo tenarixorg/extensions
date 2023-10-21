@@ -14,19 +14,3 @@
     "tar": "6.2.0"
   }
 }
-{
-  "name": "artifacts",
-  "version": "0.0.0",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "generate": "node ./generate/index.js",
-    "cpanm": "perl ./publish/install.pl",
-    "main": "perl ./publish/main.pl"
-  },
-  "devDependencies": {
-    "npm-packlist": "5.1.3",
-    "ora": "7.0.1",
-    "tar": "6.2.0"
-  }
-}
