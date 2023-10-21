@@ -14,21 +14,29 @@ jobs:
 
     strategy:
       matrix:
-        node: [16.x]
+        node: [18.x]
         os: [ubuntu-latest]
-
-    env:
-      TOKEN: ${{ secrets.EXT_TOKEN }}
 
     name: Build - ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - name: Install dependencies
+      - name: Install Node Dependencies
         run: yarn
-      - name: Build
+      - name: Build Extensions
         run: yarn build
+      - name: Generate Artifacts
+        run: yarn push:artifacts:generate
+      - name: Install Perl Dependencies
+        run: yarn push:artifacts:cpanm
+      - name: Checkout -> Artifacts
+        uses: actions/checkout@v4
+        with:
+          ref: artifacts
+          path: artifacts
+      - name: Publish Artifacts
+        run: yarn push:artifacts:main
