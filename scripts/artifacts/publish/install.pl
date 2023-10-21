@@ -9,10 +9,10 @@ my @module_list = ();
 
 while (<FH>) {
     my ($module) = $_ =~ /require.*('.*'|".*").*;/ig;
-    print("Module: $module\n");
     push( @module_list, $module =~ s/('|")/ /rg ) if ($module);
 }
 
 close(FH);
 
+print("Modules: @module_list\n");
 system("cpanm @module_list");
