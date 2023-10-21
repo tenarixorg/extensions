@@ -14,5 +14,4 @@ while (<FH>) {
 
 close(FH);
 
-print("Modules: @module_list\n");
 system("cpanm @module_list");
