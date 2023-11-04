@@ -1,0 +1,92 @@
+[
+  {
+    "name": "heavenmanga",
+    "lang": "es",
+    "version": "1.0.0",
+    "description": "Heavenmanga source for tenarix",
+    "readme": "# Tenarix Extension Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/heavenmanga_1.0.0.tgz"
+  },
+  {
+    "name": "inmanga",
+    "lang": "es",
+    "version": "1.0.0",
+    "description": "Inmanga source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/inmanga_1.0.0.tgz"
+  },
+  {
+    "name": "lectormanga",
+    "lang": "es",
+    "version": "1.0.0",
+    "description": "Lector Manga source for tenarix",
+    "readme": "# Tenarix Extension Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/lectormanga_1.0.0.tgz"
+  },
+  {
+    "name": "leermanga",
+    "lang": "es",
+    "version": "1.0.0",
+    "description": "Leer Manga source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/leermanga_1.0.0.tgz"
+  },
+  {
+    "name": "manga1s",
+    "lang": "en",
+    "version": "1.0.0",
+    "description": "Manga 1S source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/manga1s_1.0.0.tgz"
+  },
+  {
+    "name": "mangago",
+    "lang": "en",
+    "version": "1.0.0",
+    "description": "MangaGo source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/mangago_1.0.0.tgz"
+  },
+  {
+    "name": "readmanga",
+    "lang": "en",
+    "version": "1.0.0",
+    "description": "Read Manga Today source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/readmanga_1.0.0.tgz"
+  },
+  {
+    "name": "teenmanhua",
+    "lang": "en",
+    "version": "1.0.0",
+    "description": "Teen Manhua source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/teenmanhua_1.0.0.tgz"
+  },
+  {
+    "name": "tumangaonline",
+    "lang": "es",
+    "version": "1.0.0",
+    "description": "Tu Manga Online source for tenarix",
+    "readme": "# Tenarix Extension Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/tumangaonline_1.0.0.tgz"
+  },
+  {
+    "name": "zahard",
+    "lang": "en",
+    "version": "1.0.0",
+    "description": "Zahard source for tenarix",
+    "readme": "# Tenarix README Template",
+    "author": "Akuqt",
+    "tarball": "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/zahard_1.0.0.tgz"
+  }
+]
