@@ -45,4 +45,5 @@ jobs:
       - name: Publish Artifacts
         run: |
           ./scripts/artifacts/clean/main.sh
+          cd artifacts
           perl ../scripts/artifacts/publish/main.pl
