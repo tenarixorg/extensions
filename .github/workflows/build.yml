@@ -44,5 +44,6 @@ jobs:
           path: artifacts
       - name: Publish Artifacts
         run: |
+          rm -rf artifacts/tarballs
           cp -r tarballs artifacts/tarballs && cd artifacts
           perl ../scripts/artifacts/publish/main.pl
