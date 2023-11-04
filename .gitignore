@@ -45,5 +45,8 @@ app/workers/test/out_/crypto.txt.fail
 tarballs/
 *.tgz
 
+# readme files
+readmes/
+
 # Metadata
 info.json
