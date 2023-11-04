@@ -21,6 +21,8 @@ const getErrors = (extension) => {
 
 export const packExtension = async (path) => {
   const path_ = resolve(path);
+  const baseT =
+    "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/";
   try {
     const packageJson = JSON.parse(
       readFileSync(`${path_}/package.json`, "utf8")
@@ -34,6 +36,7 @@ export const packExtension = async (path) => {
       return;
     }
     const spinner = ora("Creating tarball...").start();
+    const tgz = `${packageJson.name}_${packageJson.version}.tgz`;
     const data = {
       name: packageJson.name,
       lang: packageJson.lang,
@@ -41,7 +44,7 @@ export const packExtension = async (path) => {
       description: packageJson?.description || "",
       readme: readme || "",
       author: packageJson?.author || "",
-      tarball: "",
+      tarball: baseT + tgz,
     };
 
     const tarballs = resolve(path_, "../../tarballs/");
@@ -52,7 +55,7 @@ export const packExtension = async (path) => {
       });
     }
 
-    const fullPath = join(tarballs, `${data.name}_${data.version}.tgz`);
+    const fullPath = join(tarballs, tgz);
     try {
       const files = await pack({
         path,
@@ -67,10 +70,7 @@ export const packExtension = async (path) => {
         files
       );
       spinner.succeed(`Tarball created: ${fullPath}`);
-      return {
-        ...data,
-        tarball: fullPath,
-      };
+      return data;
     } catch (error) {
       spinner.fail(error.message);
       return;
