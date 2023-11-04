@@ -45,5 +45,5 @@ jobs:
       - name: Publish Artifacts
         run: |
           ls -alh
-          cp tarballs artifacts/tarballs && cd artifacts
+          cp -r tarballs artifacts/tarballs && cd artifacts
           ls -alh
