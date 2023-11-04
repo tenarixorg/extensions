@@ -1,5 +1,7 @@
 *
 !.gitignore
 !tarballs
+!readmes
+!*.md
 !*.tgz
 !info.json
