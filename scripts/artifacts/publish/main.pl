@@ -7,8 +7,8 @@ use IO::CaptureOutput qw(capture);
 use constant NAME  => 'github-actions[bot]';
 use constant EMAIL => 'github-actions[bot]@users.noreply.github.com';
 
-# main();
-_print_color( 'red', 'not ready yet!' );
+main();
+#_print_color( 'red', 'not ready yet!' );
 
 sub main {
     Git::command_noisy( 'config', '--global', 'user.name',  NAME );
