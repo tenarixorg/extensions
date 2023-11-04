@@ -44,7 +44,6 @@ jobs:
           path: artifacts
       - name: Publish Artifacts
         run: |
-          cd artifacts
           ls -alh
-          cd ../master
+          cd artifacts
           ls -alh
