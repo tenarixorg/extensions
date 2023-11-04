@@ -43,4 +43,6 @@ jobs:
           ref: artifacts
           path: artifacts
       - name: Publish Artifacts
-        run: yarn push:artifacts:main
+        run: |
+          cd artifacts
+          perl ../main/scripts/artifacts/publish/main.pl
