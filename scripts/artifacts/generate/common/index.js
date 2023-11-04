@@ -2,8 +2,13 @@
 import ora from "ora";
 import pack from "npm-packlist";
 import { join, resolve } from "path";
-import { readFileSync, mkdirSync, existsSync } from "fs";
+import fs from "fs";
 import { create } from "tar";
+
+const getRaw = (folder, name) => {
+  const base = "raw.githubusercontent.com/tenarixorg/extensions/artifacts";
+  return `https://${base}/${folder}/${name}`;
+};
 
 const getErrors = (extension) => {
   const errors = [];
@@ -21,13 +26,11 @@ const getErrors = (extension) => {
 
 export const packExtension = async (path) => {
   const path_ = resolve(path);
-  const baseT =
-    "https://raw.githubusercontent.com/tenarixorg/extensions/artifacts/tarballs/";
   try {
     const packageJson = JSON.parse(
-      readFileSync(`${path_}/package.json`, "utf8")
+      fs.readFileSync(`${path_}/package.json`, "utf8")
     );
-    const readme = readFileSync(`${path_}/README.md`, "utf8");
+    const readme = fs.readFileSync(`${path_}/README.md`, "utf8");
     const errors = getErrors(packageJson);
     const eL = errors.length;
     if (eL > 0) {
@@ -37,25 +40,33 @@ export const packExtension = async (path) => {
     }
     const spinner = ora("Creating tarball...").start();
     const tgz = `${packageJson.name}_${packageJson.version}.tgz`;
+    const md = `${packageJson.name}_${packageJson.version}.md`;
     const data = {
       name: packageJson.name,
+      author: packageJson?.author || "",
       lang: packageJson.lang,
       version: packageJson.version,
       description: packageJson?.description || "",
-      readme: readme || "",
-      author: packageJson?.author || "",
-      tarball: baseT + tgz,
+      readme: getRaw("readmes", md),
+      tarball: getRaw("tarballs", tgz),
     };
 
     const tarballs = resolve(path_, "../../tarballs/");
+    const readmes = resolve(path_, "../../readmes/");
 
-    if (!existsSync(tarballs)) {
-      mkdirSync(tarballs, {
+    if (!fs.existsSync(tarballs)) {
+      fs.mkdirSync(tarballs, {
+        recursive: true,
+      });
+    }
+    if (!fs.existsSync(readmes)) {
+      fs.mkdirSync(readmes, {
         recursive: true,
       });
     }
 
-    const fullPath = join(tarballs, tgz);
+    const tarballPath = join(tarballs, tgz);
+    const readmePath = join(readmes, md);
     try {
       const files = await pack({
         path,
@@ -65,11 +76,12 @@ export const packExtension = async (path) => {
           prefix: data.name,
           cwd: path_,
           gzip: true,
-          file: fullPath,
+          file: tarballPath,
         },
         files
       );
-      spinner.succeed(`Tarball created: ${fullPath}`);
+      spinner.succeed(`Tarball created: ${tarballPath}`);
+      fs.writeFileSync(readmePath, readme);
       return data;
     } catch (error) {
       spinner.fail(error.message);
