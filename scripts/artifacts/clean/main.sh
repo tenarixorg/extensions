@@ -6,5 +6,3 @@ cp -r info.json artifacts/info.json
 # Refresh tarballs
 rm -rf artifacts/tarballs
 cp -r tarballs artifacts/tarballs
-# Move to artifacts
-cd artifacts
