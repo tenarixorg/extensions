@@ -44,3 +44,6 @@ app/workers/test/out_/crypto.txt.fail
 # tarballs 
 tarballs/
 *.tgz
+
+# Metadata
+info.json
