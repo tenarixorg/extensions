@@ -45,4 +45,6 @@ jobs:
       - name: Publish Artifacts
         run: |
           cd artifacts
-          perl ../main/scripts/artifacts/publish/main.pl
+          ls -alh
+          cd ../master
+          ls -alh
