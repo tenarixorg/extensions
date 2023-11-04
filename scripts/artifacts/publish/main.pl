@@ -31,7 +31,7 @@ sub main {
         );
         print( color('reset') );
         print( color('rgb543') );
-        Git::command_noisy( 'push', '-u', 'origin', 'main' );
+        Git::command_noisy( 'push', '-u', 'origin', 'artifacts' );
         print( color('reset') );
     }
 }
